@@ -45,8 +45,27 @@ console.log(cardetails);
     console.log(Star);
 */
 
-//! Task 1(d):  creates an instance of the class Movie with the title “Casino Royale”, the studio “Eon Productions”, and the rating “PG­13”
+//! Task 1(c): 
+class Movie{
+  constructor(title,studio,rating="PG"){
+      this.title=title;
+      this.studio=studio;
+      this.rating=rating;
+  }
+}
+const Star=new Movie("leo","7 Screen Studio","7.2")
+const Power=new Movie("Avenger","marvel studios")
+const Release= new Movie("Wonka","Hollywood","7.0")
+const Super = new Movie("Godzilla","CG")
+const Comedy = new Movie("Kung fu Panda 4","VFX")
+console.log(Star);
+console.log(Power);
+console.log(Release);
+console.log(Super);
+console.log(Comedy);
 
+//! Task 1(d):  creates an instance of the class Movie with the title “Casino Royale”, the studio “Eon Productions”, and the rating “PG­13”
+/*
 class Movie {
   constructor(title, studio, rating) {
     this.title = title;
@@ -56,16 +75,48 @@ class Movie {
 }
 const Hollywood = new Movie("Casino Royale", "Eon Productions", "PG­13");
 console.log(Hollywood);
+*/
 
 //! Task 2:
-class Circle {
-  constructor(radius, color) {
-    this.radius = radius;
-    this.color = color;
+/*
+class Circle{
+  constructor(radius,color){
+      this.radius=radius;
+      this.color = color;
+  }
+  get Radius(){
+      return this.radius
+  }
+  set Radius(n){
+      this.radius = n;
+  }
+  get Color(){
+      return this.color;
+  }
+  set Color(c){
+      this.color = c
+  }
+  get toString(){
+      return `"Circle[radius= ${this.radius} ,color = ${this.color}]"`
+  }
+  get area(){
+      return Math.PI*Math.pow(this.radius,2)
+  }
+  get circumference(){
+      return 2*Math.PI*this.radius
   }
 }
-const parameter = new Circle("1.0", "red");
-console.log(parameter);
+let obj = new Circle(1.0,"red") 
+console.log(obj.Color);
+console.log(obj.Radius);
+console.log(obj.toString);
+console.log(obj.area);
+console.log(obj.circumference);
+obj.Radius=3.5
+console.log(obj.Radius);
+obj.Color="green"
+console.log(obj.Color);
+*/
 
 //! Task 3: Constructor for a class Person to hold all the details
 class Person{
@@ -82,3 +133,17 @@ class Person{
     console.log(information);
 
 //! Task 4: Constructor for a class to calculate the Uber price.
+class Uber{
+  constructor(kilometer,price){
+    this.kilometer=kilometer;
+    this.price=price;
+  }
+  set Price(n){
+     this.price=n;
+  }
+  get Price(){
+    return kilometer*n;
+  }
+}
+let obj= new Uber(10,20)
+console.log(obj);

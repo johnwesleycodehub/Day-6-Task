@@ -1,23 +1,8 @@
-//!Session practice
-class Car {
-  constructor(brand, color, model, type, price, section) {
-    this.brand = brand;
-    this.color = color;
-    this.model = model;
-    this.type = type;
-    this.price = price;
-    this.section = section;
-  }
-}
-const cardetails = new Car(
-  "Kia",
-  "Black",
-  "Carens",
-  "7-Seater X-Line",
-  "12 Lakhs",
-  "SUV"
-);
-console.log(cardetails);
+/*The class Movie is stated below. An instance of class Movie represents a film. This class has the following three properties:
+title, which is a String representing the title of the movie
+studio, which is a String representing the studio that made the movie
+rating, which is a String representing the rating of the movie (i.e. PG­13, R, etc)
+*.
 
 //! Task 1(a): Constructor for the class Movie
 /*
@@ -29,7 +14,9 @@ console.log(cardetails);
         }
     }
     const film=new Movie("Jailer","Sun Prodcutions","8")
-    console.log(film);
+    console.log(film.title);
+    console.log(film.studio);
+    console.log(film.rating);
     */
 
 //! Task 1(b): Constructor for the class Movie will set the class property rating to "PG" as default when no rating is provided
@@ -41,8 +28,10 @@ console.log(cardetails);
             this.rating=rating;
         }
     }
-    const Star=new Movie("leo","7 Screen Studio","7.2")
-    console.log(Star);
+    const Star=new Movie("leo","7 Screen Studio")
+    console.log(Star.title);
+    console.log(Star.studio);
+    console.log(Star.rating);
 */
 
 //! Task 1(c):
@@ -53,18 +42,19 @@ class Movie {
     this.rating = rating;
   }
   static getPG(movies){ 
-       return movies.filter(movies=>movies.rating.PG)
-       console.log()
+    return movies.filter((movie)=> movie.rating === "PG");
   }
 }
-const movies = [
-  new Movie("leo", "7 Screen Studio", "7.2"),
-  new Movie("Avenger", "marvel studios"),
-  new Movie("Wonka", "Hollywood", "7.0"),
-  new Movie("Godzilla", "CG"),
-  new Movie("Kung fu Panda 4", "VFX"),
-];
-console.log(movies);
+
+ let mov1=new Movie("leo", "7 Screen Studio", "7.2")
+ let mov2=new Movie("Avenger", "marvel studios")
+ let mov3=new Movie("Wonka", "Hollywood", "7.0")
+ let mov4=new Movie("Godzilla", "CG")
+ let mov5=new Movie("Kung fu Panda 4", "VFX")
+
+let Moviearr=[mov1,mov2,mov3,mov4,mov5]
+let MovieList = Movie.getPG(Moviearr);
+console.log(MovieList);
 
 //! Task 1(d):  creates an instance of the class Movie with the title “Casino Royale”, the studio “Eon Productions”, and the rating “PG­13”
 /*
@@ -142,17 +132,18 @@ const information = new Person(
 console.log(information);
 
 //! Task 4: Constructor for a class to calculate the Uber price.
-// class Uber {
-//   constructor(kilometer, price) {
-//     this.kilometer = kilometer;
-//     this.price = price;
-//   }
-//   set Price(n) {
-//     this.price = n;
-//   }
-//   get Price() {
-//     return kilometer * n;
-//   }
-// }
-// let obj = new Uber(10, 20);
-// console.log(obj);
+class Uber {
+  constructor(kilometer, price) {
+    this.kilometer = kilometer;
+    this.price = price;
+  }
+  set Kilometer(n) {
+    this.price = n*50;
+  }
+  get Price() {
+    return this.price;
+  }
+}
+let obj = new Uber(10, 60);
+obj.Kilometer=8
+console.log(obj.Price);

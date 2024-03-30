@@ -45,24 +45,26 @@ console.log(cardetails);
     console.log(Star);
 */
 
-//! Task 1(c): 
-class Movie{
-  constructor(title,studio,rating="PG"){
-      this.title=title;
-      this.studio=studio;
-      this.rating=rating;
+//! Task 1(c):
+class Movie {
+  constructor(title, studio, rating = "PG") {
+    this.title = title;
+    this.studio = studio;
+    this.rating = rating;
+  }
+  static getPG(movies){ 
+       return movies.filter(movies=>movies.rating.PG)
+       console.log()
   }
 }
-const Star=new Movie("leo","7 Screen Studio","7.2")
-const Power=new Movie("Avenger","marvel studios")
-const Release= new Movie("Wonka","Hollywood","7.0")
-const Super = new Movie("Godzilla","CG")
-const Comedy = new Movie("Kung fu Panda 4","VFX")
-console.log(Star);
-console.log(Power);
-console.log(Release);
-console.log(Super);
-console.log(Comedy);
+const movies = [
+  new Movie("leo", "7 Screen Studio", "7.2"),
+  new Movie("Avenger", "marvel studios"),
+  new Movie("Wonka", "Hollywood", "7.0"),
+  new Movie("Godzilla", "CG"),
+  new Movie("Kung fu Panda 4", "VFX"),
+];
+console.log(movies);
 
 //! Task 1(d):  creates an instance of the class Movie with the title “Casino Royale”, the studio “Eon Productions”, and the rating “PG­13”
 /*
@@ -119,31 +121,38 @@ console.log(obj.Color);
 */
 
 //! Task 3: Constructor for a class Person to hold all the details
-class Person{
-    constructor(name,age,gender,MartialStatus,contact,gmail){
-        this.name=name;
-        this.age=age;
-        this.gender=gender;
-        this.MartialStatus=MartialStatus;
-        this.contact=contact;
-        this.gmail=gmail;
-    }
+class Person {
+  constructor(name, age, gender, MartialStatus, contact, gmail) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.MartialStatus = MartialStatus;
+    this.contact = contact;
+    this.gmail = gmail;
+  }
 }
-    const information=new Person("John Wesley","22","male","single","6381301756","johnwesley2307r@gmail.com")
-    console.log(information);
+const information = new Person(
+  "John Wesley",
+  "22",
+  "male",
+  "single",
+  "6381301756",
+  "johnwesley2307r@gmail.com"
+);
+console.log(information);
 
 //! Task 4: Constructor for a class to calculate the Uber price.
-class Uber{
-  constructor(kilometer,price){
-    this.kilometer=kilometer;
-    this.price=price;
-  }
-  set Price(n){
-     this.price=n;
-  }
-  get Price(){
-    return kilometer*n;
-  }
-}
-let obj= new Uber(10,20)
-console.log(obj);
+// class Uber {
+//   constructor(kilometer, price) {
+//     this.kilometer = kilometer;
+//     this.price = price;
+//   }
+//   set Price(n) {
+//     this.price = n;
+//   }
+//   get Price() {
+//     return kilometer * n;
+//   }
+// }
+// let obj = new Uber(10, 20);
+// console.log(obj);
